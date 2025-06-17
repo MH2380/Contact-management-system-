@@ -1,7 +1,7 @@
 #include <iostream>
-#include <sstream>  //yihe header file le string manipulation mitekm class nw ena i used it to divide the lines extracted from ... 
-#include <fstream>  //the text file and store them in the struct variables thai way cout lemadreg its so easy.
-#include <string>   //sstream header file include saydereg same thing accomplish madreg michal kehone try it.
+#include <sstream>  
+#include <fstream>  
+#include <string> 
 #include <cstdlib>
 
 using namespace std;
@@ -71,7 +71,7 @@ void editContact() {
 
     while (getline(file, line)) {
         Contact contact;
-        stringstream str(line); //lezi line nw sstream header miyasfelgew
+        stringstream str(line);
         str >> contact.firstName >> contact.lastName >> contact.phoneNumber >> contact.address;
 
         if (contact.phoneNumber == phoneNumber) {
@@ -162,7 +162,7 @@ void viewContacts() {
 
         while (getline(file, line)) {
             Contact contact;
-            stringstream str(line);  // and this
+            stringstream str(line);
             str >> contact.firstName >> contact.lastName >> contact.phoneNumber >> contact.address;
 
             cout << "\nFirst Name: " << contact.firstName << endl;
@@ -192,7 +192,7 @@ void deleteContact() {
 
     while (getline(file, line)) {
         Contact contact;
-        stringstream str(line); // and finaly lezignaw
+        stringstream str(line);
         str >> contact.firstName >> contact.lastName >> contact.phoneNumber >> contact.address;
 
         if (contact.phoneNumber == phoneNumber) {
@@ -217,7 +217,7 @@ void deleteContact() {
     }
 }
 int main() {
-	system("color 0a"); // yihegnaw line color lemekeyer nw ke yoni korijat nw. change the number and letter wedemitfeligut color
+	system("color 0a");
     int choice;
 	cout << "*************************************************\n";
 	cout << "*******Welcome To Contact Managment System*******\n";
